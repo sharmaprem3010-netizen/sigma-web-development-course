@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .captcha {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .captcha input {
+      margin-right: 0.5rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #00b4db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0083b0;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Contact Form</h2>
+    <p>Please fill in your information and we'll be sending your order in no time.</p>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="First Name | Last Name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="e.g. hello@contact.net" required />
+
+      <label for="phone">Phone*</label>
+      <input type="tel" id="phone" name="phone" placeholder="### | ### | ####" required />
+
+      <label for="subject">Message Subject*</label>
+      <select id="subject" name="subject" required>
+        <option value="other">Other</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <div class="captcha">
+        <input type="checkbox" id="robot" name="robot" required />
+        <label for="robot">I'm not a robot</label>
+      </div>
+
+      <small>reCAPTCHA - Privacy - Terms</small>
+
+      <button type="submit">SUBMIT FORM</button>
+    </form>
+  </div>
+</body>
+</html>
